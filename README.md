@@ -33,3 +33,10 @@ def printFiles(pasta = ''):
   files = sftp.listdir(pasta)
   print(files)
 ```
+
+A terceira função pega UM arquivo do servidor (remoteFile) e coloca na sua pasta local (localFile)
+
+```
+def getFile(remoteFile, localFile):
+  sftp.get(remoteFile,localFile)
+```
