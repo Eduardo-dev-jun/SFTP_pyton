@@ -34,17 +34,31 @@ def printFiles(pasta = ''):
   print(files)
 ```
 
-A terceira função pega UM arquivo do servidor (remoteFile) e coloca na sua pasta local (localFile)
+A terceira função pega UM arquivo do servidor (remoteFile) e coloca na sua pasta local (localFile).
 
 ```Python
 def getFile(remoteFile, localFile):
   sftp.get(remoteFile,localFile)
 ```
 
-A quarta função delete UM arquivo do servidor(delFile)
+A quarta função delete UM arquivo do servidor(delFile).
 
 ```Python
 def delFile(delFile):
   sftp.remove(delFile)
   print(delFile+'Deletado')
+```
+
+A quinta e última função, deleta todos os arquivos de uma pasta do servior que é passada como parametro, e caso não receba parametros ela deleta todos os aquivos da pasta raiz.
+
+```Python
+def delFiles(pasta = ''):
+  files = sftp.listdir(pasta)
+  print(files)
+
+  for arq in sftp.listdir(pasta):
+    sftp.remove(pasta+'/'+arq)
+
+  files = sftp.listdir(pasta)
+  print(files)
 ```
