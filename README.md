@@ -40,3 +40,11 @@ A terceira função pega UM arquivo do servidor (remoteFile) e coloca na sua pas
 def getFile(remoteFile, localFile):
   sftp.get(remoteFile,localFile)
 ```
+
+A quarta função delete UM arquivo do servidor(delFile)
+
+```Python
+def delFile(delFile):
+  sftp.remove(delFile)
+  print(delFile+'Deletado')
+```
