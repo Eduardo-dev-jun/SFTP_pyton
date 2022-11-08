@@ -1,4 +1,4 @@
-<h1 align="center">Conecxão SFTP com Python</h1>
+<h1 align="center">Conexão SFTP com Python</h1>
 
 Primeiramente, para conectar-se ao servidor é necessario incluir os dados do servidor no arquivo config.py mostrado abaixo
 
