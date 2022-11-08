@@ -29,7 +29,7 @@ def putFiles(localFiles,extFile,remotePath = ''):
 A segunda função verifica os arquivos do servidor e printa eles no console, caso os aquivos que deseja puxar esteja dentro de uma pasta do servidor será necessario passar o caminho dessa pasta como paremetro ao chamar a função.
 
 ```Python
-def printFiles(pasta = ''): #se a função for chamada sem o argumento ela printara a pasta raiz do servidor
+def printFiles(pasta = ''):
   files = sftp.listdir(pasta)
   print(files)
 ```
