@@ -36,7 +36,7 @@ def printFiles(pasta = ''):
 
 A terceira função pega UM arquivo do servidor (remoteFile) e coloca na sua pasta local (localFile)
 
-```
+```Python
 def getFile(remoteFile, localFile):
   sftp.get(remoteFile,localFile)
 ```
